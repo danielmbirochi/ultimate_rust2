@@ -47,7 +47,7 @@ fn main() {
     let words = vec!["autobot", "beach", "car", "decepticon", "energon", "frothy"];
     let transformed = words
         .into_iter()
-        .filter(|w| w.contains("h"))
+        .filter(|w| !w.contains("h"))
         .map(|w| w.to_uppercase())
         .collect::<Vec<String>>();
     println!("Transformed: {:?}", transformed);
