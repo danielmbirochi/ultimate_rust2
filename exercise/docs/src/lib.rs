@@ -15,8 +15,23 @@
 // - Document the "roundness" field, explaining that it is a percentage
 // - Document the "orangeness" field, explaining that it is a number from 8 to 27
 
+
+
+//! A pumpkin is a vernacular term for mature winter squash of species and varieties in the genus Cucurbita 
+//! that has culinary and cultural significance but no agreed upon botanical or scientific meaning. The term pumpkin 
+//! is sometimes used interchangeably with "squash" or "winter squash", and is commonly used for cultivars of 
+//! Cucurbita argyrosperma, Cucurbita ficifolia, Cucurbita maxima, Cucurbita moschata, and Cucurbita pepo.
+//! ![Pumpkins](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/FrenchMarketPumpkinsB.jpg/700px-FrenchMarketPumpkinsB.jpg)
+
+
+/// Big Orange Thing
+/// # Recipes
+/// Recipes will be coming soon.
 pub struct Pumpkin {
+    /// Roundness hold the percentage of roundness of the pumpkin.
     pub roundness: f32,
+    /// Orangeness hold the number of orangeness of the pumpkin.
+    /// It is a number from 8 to 27.
     pub orangeness: i32,
 }
 
@@ -24,17 +39,22 @@ pub struct Pumpkin {
 // can't be used for pie. :'-(
 
 impl Pumpkin {
+    /// smash punpkin allows you to smash the pumpkin.
+    /// Note: if you smash the pumpkin, it will be gone. Then it can't be used for pie. :(
     pub fn smash(self) {}
 }
 
 // 5. Document that BURNT_ORANGE is for the "orangeness" field in the Pumpkin struct.
 // - Link to the Pumpkin struct in your description
 
+/// BURNT_ORANGE is for the "orangeness" field in the [Pumpkin] struct.
 pub const BURNT_ORANGE: i32 = 13;
 
 // Challenge: Find the option to pass to `cargo doc` so that documentation for this private item
 // gets generated as well.  Hint: `cargo doc -h` will show you all the relevant options.
 
+
+// cargo doc --no-deps --document-private-items --open
 /// For internal use only. In fact, this documentation is so private that it won't be generated.
 /// At least not by default. But if you pass the correct option in, it will magically appear!
 #[allow(dead_code)] // to silence the warning

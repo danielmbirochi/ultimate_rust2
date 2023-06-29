@@ -14,8 +14,8 @@ const PI: f32 = 3.141_592_7;
 fn count_to_5() -> i32 {
     let mut counter = 0;
     loop {
-        if counter > PI as i32 && counter > 5{
-                break;
+        if counter > PI as i32 && counter > 5 {
+            break;
         }
         counter += 1;
     }
@@ -25,6 +25,7 @@ fn count_to_5() -> i32 {
 fn main() {
     println!("I can count to {}", count_to_5());
 }
+
 #[cfg(test)]
 mod test {
     use super::*;
